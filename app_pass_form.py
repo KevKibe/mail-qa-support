@@ -13,7 +13,7 @@ def store_app_password(email, app_passwords, supabase_client):
     """Stores the passwords in the Supabase database."""
     try:
         supabase_client.table('slack_app').update({'app_passwords': app_passwords}).match({'email': email}).execute()
-        st.write("Success, You can now close and go back to the app")
+        st.write("Success, You can now close and go back to the app and resend the prompt")
     except Exception as e:
         st.write(f"An error occurred. Try again")
 
