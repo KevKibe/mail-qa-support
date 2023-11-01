@@ -38,7 +38,7 @@ def main():
     submit_button = st.button('Submit')
 
     if submit_button:
-        if len(password) != 16:
+        if len(password) != 18:
             st.write("Error: Your Google App password must be exactly 16 characters long.")
         elif password and email:
             store_app_password(email, password, supabase_client)
